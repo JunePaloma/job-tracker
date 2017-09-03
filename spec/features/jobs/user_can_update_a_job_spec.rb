@@ -5,7 +5,8 @@ describe "User can edit a job" do
     it "Can make changes to the job" do
 
     company = create(:company)
-    job = create(:job, company: company)
+    category = create(:category)
+    job = create(:job, company: company, category: category)
 
     visit edit_company_job_path(company, job)
     fill_in "job[title]", with: "DevOps"

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :category do
-    sequence :name do |n|
+    sequence :title do |n|
       "Category #{n}"
     end
   end

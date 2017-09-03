@@ -13,6 +13,8 @@ FactoryGirl.define do
   sequence :level_of_interest do |n|
     "level #{n}"
   end
+
   company
+  category
   end
 end

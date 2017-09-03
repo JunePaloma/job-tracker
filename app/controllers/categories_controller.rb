@@ -7,7 +7,12 @@ class CategoriesController < ApplicationController
   def create
 
     @category = Category.create(category_params)
-    redirect_to @category
+    if @category.save
+      flash[:success] = "You created #{@category.title}"
+      redirect_to @category
+    else
+      render :new
+    end
   end
 
   def show
@@ -16,6 +21,13 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
+  
+  end
+
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+    redirect_to categories_path
   end
 
   private

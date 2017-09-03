@@ -37,6 +37,7 @@ ActiveRecord::Migration.maintain_test_schema!
 DatabaseCleaner.strategy = :transaction
 
  RSpec.configure do |config|
+
    config.before(:each) do
    DatabaseCleaner.start
  end
@@ -44,6 +45,7 @@ DatabaseCleaner.strategy = :transaction
  config.after(:each) do
    DatabaseCleaner.clean
  end
+ 
 end
 
 RSpec.configure do |config|
