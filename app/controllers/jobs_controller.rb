@@ -26,11 +26,12 @@ class JobsController < ApplicationController
   end
 
   def show
-    binding.pry
+
     @job = Job.find(params[:id])
     @company = Company.find(params[:company_id])
     @comment = Comment.new
-    @comment.job_id = @job.id
+    @comments = @job.comments
+
   end
 
   def edit
