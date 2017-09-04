@@ -8,7 +8,7 @@ FactoryGirl.define do
     "Job description #{n}"
   end
   sequence :city do |n|
-    "Job description #{n}"
+    "City #{n}"
   end
   sequence :level_of_interest do |n|
     "level #{n}"

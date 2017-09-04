@@ -12,7 +12,7 @@ describe "User creates a new job" do
     fill_in "job[level_of_interest]", with: 80
     fill_in "job[city]", with: "Denver"
     select('Snorkler', :from => 'job[category]')
-save_and_open_page
+
     click_button "Create"
 
     expect(current_path).to eq("/companies/#{company.id}/jobs/#{Job.last.id}")
