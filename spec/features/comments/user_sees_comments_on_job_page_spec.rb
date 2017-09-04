@@ -12,10 +12,11 @@ describe "User visits the show page for a job" do
 
           fill_in "comment[body]", with: "This sounds like a great job"
           fill_in "comment[author_name]", with: "Sally"
-          
+
           click_on "Submit"
 
           expect(page).to have_content "This sounds like a great job"
+          expect(current_path).to eq company_job_path(company, job)
 
       end
     end
