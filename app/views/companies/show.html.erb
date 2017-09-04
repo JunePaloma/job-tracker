@@ -3,3 +3,7 @@ All Jobs for <strong><%= @company.name %></strong>
 <% @company.jobs.each do |job| %>
   <ul><%= job.title %></ul>
 <% end %>
+
+<h3>Comments about this company</h3>
+<%= render partial: 'companies/contact' %>
+<%= redner partial: 'contacts/form' %>
