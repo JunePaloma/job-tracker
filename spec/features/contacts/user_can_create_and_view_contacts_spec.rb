@@ -12,7 +12,7 @@ describe "user vists the show page for a company" do
         fill_in "contact[position]", with: "Masterpiece"
         fill_in "contact[email]", with: "Mona@lisa.com"
         click_on "Submit"
-        save_and_open_page
+      
 
         expect(page).to have_content "Mona Lisa"
         expect(current_path).to eq company_path(company)
