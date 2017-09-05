@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get '/jobs', to: 'jobs#all_jobs', as: 'all_jobs'
+
+  get '/dashboard', to: 'jobs#dashboard' as: 'dashboard'
+
   resources :companies do
     resources :jobs
   end
